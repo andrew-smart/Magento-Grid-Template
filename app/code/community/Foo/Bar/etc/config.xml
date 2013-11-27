@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<config>
+	<modules>
+		<Foo_Bar>
+			<version>0.1.0</version>
+		</Foo_Bar>
+	</modules>
+	<admin>
+		<routers>
+			<adminhtml>
+				<args>
+					<modules>
+						<Foo_Bar before="Mage_Adminhtml">Foo_Bar_Adminhtml</Foo_Bar>
+					</modules>
+				</args>
+			</adminhtml>
+		</routers>
+	</admin>
+	<global>
+		<helpers>
+			<foo_bar>
+				<class>Foo_Bar_Helper</class>
+			</foo_bar>
+		</helpers>
+		<blocks>
+			<foo_bar>
+				<class>Foo_Bar_Block</class>
+			</foo_bar>
+		</blocks>
+		<models>
+			<foo_bar>
+				<class>Foo_Bar_Model</class>
+				<resourceModel>foo_bar_resource</resourceModel>
+			</foo_bar>
+			<foo_bar_resource>
+				<class>Foo_Bar_Model_Resource</class>
+				<entities>
+					<baz>
+						<table>baz</table>
+					</baz>
+				</entities>
+			</foo_bar_resource>
+		</models>
+		<resources>
+			<foo_bar_setup>
+				<setup>
+					<module>Foo_Bar</module>
+				</setup>
+			</foo_bar_setup>
+		</resources>
+	</global>
+</config>

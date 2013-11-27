@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<config>
+	<menu>
+		<!--
+			Create a new menu node
+			If we wanted to we could add to an existing menu node by
+			changing bar to something like catalog or sales. The children
+			will then appear under that instead
+		-->
+		<bar translate="title" module="foo_bar">
+			<title>Bar</title>
+			<!-- these will appear as a sub menu -->
+			<children>
+				<baz translate="title" module="foo_bar">
+					<title>Baz</title>
+					<!-- the action we want to perfom -->
+					<action>adminhtml/baz</action>
+				</baz>
+			</children>
+		</bar>
+	</menu>
+</config>
